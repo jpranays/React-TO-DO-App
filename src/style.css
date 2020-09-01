@@ -1,0 +1,109 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	background: royalblue;
+	font-family: "Alata", sans-serif;
+}
+
+.form-cotainer {
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.todo-input {
+	padding: 15px;
+	border: 2px grey solid;
+	outline: none;
+	border-radius: 15px;
+	box-shadow: 1px 1px 10px 1px wheat;
+	font-size: large;
+	background: gainsboro;
+}
+.todo-input:focus,
+.todo-input:hover {
+	box-shadow: 1px 1px 20px 2px darkgray;
+}
+.submit-button {
+	border: none;
+	outline: none;
+	padding: 10px;
+	border-radius: 10px;
+	font-family: sans-serif;
+	font-weight: bold;
+	margin-left: 10px;
+	cursor: pointer;
+	transition: all 0.1s ease-out;
+}
+
+.submit-button:hover {
+	color: royalblue;
+}
+.todo-container {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.todo {
+	width: max-content;
+	height: max-content;
+	margin: 40px;
+	background-color: white;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 5px;
+	box-shadow: 0 20px 50px rgba(52, 7, 141, 0.7);
+	transition: transform 0.2s;
+	cursor: pointer;
+	user-select: none;
+	outline: none;
+}
+.todo:hover {
+	transform: scale(1.05);
+}
+.button-container {
+	margin-top: 5px;
+	width: 100%;
+	display: flex;
+}
+.action-button {
+	padding: 10px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	color: wheat;
+	font-weight: 700;
+	user-select: none;
+	transition: filter 1s;
+}
+
+#remove-button {
+	background-color: red;
+	margin-right: auto;
+	border-bottom-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+#mark-done-button {
+	background-color: green;
+	margin-left: auto;
+	border-bottom-right-radius: 20px;
+	border-top-left-radius: 20px;
+}
+.todo-value h2 {
+	letter-spacing: 5px;
+}
+@media screen and (max-width: 360px) {
+	.submit-button {
+		display: none;
+	}
+}

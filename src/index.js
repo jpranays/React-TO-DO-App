@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Todo from "./Components/Todo";
+import "./style.css";
 class App extends Component {
 	constructor(props) {
 		super(props);
@@ -45,8 +46,14 @@ class App extends Component {
 								value={this.state.todo}
 								onSubmit={this.handleChange}
 								required
+								className="todo-input"
+								placeholder="What to-do ?"
 							/>
-							<input type="submit" />
+							<input
+								type="submit"
+								className="submit-button"
+								value="Add to-do"
+							/>
 						</form>
 					</div>
 					<div className="todo-container">
@@ -62,7 +69,15 @@ class App extends Component {
 								/>
 							))
 						) : (
-							<h1>No Todos</h1>
+							<p
+								style={{
+									textAlign: "center",
+									lineHeight: "50vh",
+									fontSize: "8vw",
+								}}
+							>
+								WooHoo,Nothing To-Do
+							</p>
 						)}
 					</div>
 				</div>

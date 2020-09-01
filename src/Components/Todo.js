@@ -28,13 +28,31 @@ class Todo extends Component {
 		let { todo_value, status } = this.props;
 		return (
 			<div className="todo">
-				{status ? (
-					<h2 style={{ textDecoration: "line-through" }}>{todo_value}</h2>
-				) : (
-					<h2>{todo_value}</h2>
-				)}
-				<button onClick={this.todoClear}>Clear</button>
-				<button onClick={this.todoComplete}>Completed</button>
+				<div className="todo-value">
+					{status ? (
+						<h2 style={{ textDecoration: "line-through", filter: "blur(2px)" }}>
+							{todo_value}
+						</h2>
+					) : (
+						<h2>{todo_value}</h2>
+					)}
+				</div>
+				<div className="button-container">
+					<button
+						onClick={this.todoClear}
+						className="action-button"
+						id="remove-button"
+					>
+						Remove
+					</button>
+					<button
+						onClick={this.todoComplete}
+						className="action-button"
+						id="mark-done-button"
+					>
+						{status ? "Not-done" : "Mark done"}
+					</button>
+				</div>
 			</div>
 		);
 	}
